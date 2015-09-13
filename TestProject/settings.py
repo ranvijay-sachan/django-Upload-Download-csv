@@ -68,9 +68,9 @@ DATABASES = {
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'credr_db1',
-#         'USER':'credr',
-#         'PASSWORD':'credr',
+#         'NAME': 'root',
+#         'USER':'root',
+#         'PASSWORD':'root',
 #         'HOST':'localhost',
 #         'PORT':'5432'
 #     }
