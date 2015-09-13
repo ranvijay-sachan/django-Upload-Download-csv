@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>csv list</title>
+ </head>
+ <body>
+
+ {% if csvlist.count > 0 %}
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>Title</th>
+                <th>City</th>
+                <th>Csv</th>
+                <th>User</th>
+                <th>Date</th>
+                <th>Download csv</th>
+            </tr>
+        </thead>
+        {% for csv in csvlist %}
+        <tbody>
+            <tr>
+                <td>{{ csv.id }}</td>
+                <td>{{ csv.title }}</td>
+                <td>{{ csv.city }}</td>
+                <td>{{ csv.upload_file }}</td>
+                <td>{{ csv.user_id }}</td>
+                <td>{{ csv.created_date }}</td>
+                <td><a href="{{ MEDIA_URL }}/{{ csv.upload_file }}" target="_blank">Download</a></td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+{% else %}
+<p>None to show :)</p>
+{% endif %}
+ </body>
+</html>
